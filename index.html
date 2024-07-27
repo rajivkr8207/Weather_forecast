@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-[url('https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-norepet bg-center bg-cover grid place-items-center min-h-screen"
+  >
+    <div
+      class="lg:w-[30rem] md:w-[25rem] w-[20rem] shadow-lg border mx-auto flex flex-col gap-5 p-5 bg-white/20 backdrop-blur-[10px] rounded-lg"
+    >
+      <h1 class="text-center text-2xl font-bold text-white/90">
+        Weather ForCast
+      </h1>
+      <div class="flex flex-col gap-4">
+        <input
+          id="locationsearch"
+          type="text"
+          placeholder="Enter a City or State.."
+          class="border border-gray-300 text-white bg-transparent px-4 py-3 font-medium text-lg rounded focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-white"
+          autocomplete="off"
+        />
+        <button
+          id="locationbtn"
+          class="font-semibold text-lg text-white px-4 py-3 bg-gradient-to-r from-blue-400 to-blue-600 hover:bg-blue-600 rounded"
+        >
+          Submit
+        </button>
+      </div>
+      <div
+        id="weatherinfo"
+        class="mt-6 lg:p-6 p-1 rounded shadow-lg text-white"
+      >
+        <!-- Weather information will be displayed here -->
+        <!-- animate pluse -->
+        <div
+          id="animateweather"
+          class="hidden border border-blue-300 bg-white/30 backdrop-blur-[10px] shadow rounded-md p-4 max-w-sm w-full mx-auto"
+        >
+          <div class="animate-pulse flex flex-col space-x-4">
+            <div class="flex-1 space-y-6 py-1">
+              <div class="space-y-3">
+                <div class="grid grid-cols-1 gap-4 mx-auto">
+                  <!-- <div class="h-2 bg-slate-700 rounded col-span-2"></div> -->
+                  <div
+                    class="h-2 bg-slate-700 w-[30%] mx-auto rounded col-span-1"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-between gap-4">
+              <div>
+                <div class="rounded-full bg-slate-700 h-20 w-20"></div>
+                <div class="h-2 bg-slate-700 rounded w-[100%]"></div>
+              </div>
+              <div>
+                <div class="rounded bg-slate-700 h-20 w-20"></div>
+              </div>
+            </div>
+            <div class="flex-1 space-y-6 py-1 mt-3">
+              <!-- <div class="h-2 bg-slate-700 rounded"></div> -->
+              <div class="space-y-3">
+                <div class="flex justify-between gap-4">
+                  <div class="h-2 bg-slate-700 rounded w-[40%]"></div>
+                  <div class="h-2 bg-slate-700 rounded w-[40%]"></div>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <div class="h-2 bg-slate-700 rounded w-[40%]"></div>
+                  <div class="h-2 bg-slate-700 rounded w-[40%]"></div>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <div class="h-2 bg-slate-700 rounded w-[40%]"></div>
+                  <div class="h-2 bg-slate-700 rounded w-[40%]"></div>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <div class="h-2 bg-slate-700 rounded w-[40%]"></div>
+                  <div class="h-2 bg-slate-700 rounded w-[40%]"></div>
+                </div>
+                <!-- <div class="h-2 bg-slate-700 rounded"></div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
